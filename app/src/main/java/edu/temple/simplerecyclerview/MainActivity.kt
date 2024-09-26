@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
 
         // TODO (Step 2: Define lambda to modify displayTextView size)
 
+        val callBack = {fontSize : Float -> displayTextView.textSize = fontSize}
+
         // Todo (Step 3: Pass lambda to adapter)
         recyclerView.adapter = NumberDisplayAdapter(numbers)
 
