@@ -14,7 +14,9 @@ class NumberDisplayAdapter (private val numbers: Array<Int>, private val callBac
     // TODO (Step 1b: Invoke lambda via onClickListener)
     inner class NumberViewHolder (layout: View) : RecyclerView.ViewHolder (layout) {
         // enumerate views inside layout
-        val textView = layout.findViewById<TextView>(R.id.textView)
+        val textView = layout.findViewById<TextView>(R.id.textView).apply {
+            setOnClickListener{ callBack(numbers[adapterPosition].toFloat()) }
+        }
 
     }
 
